@@ -9,7 +9,7 @@ The default theme is ``shapes``. To change the theme, see ``~/.config/i3/config`
 ### Shapes
 ![Screenshot](screenshots/shapes.png)
 
-## apply config
+## Apply config
 Install [chezmoi](https://www.chezmoi.io/install/).
 Then,
 ```bash
