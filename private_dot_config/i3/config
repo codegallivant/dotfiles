@@ -193,11 +193,17 @@ bindsym $mod+r mode "resize"
 # Customizations
 
 # bindsym $mod+d exec rofi -show drun
-# bindsym $mod+d exec ~/.config/polybar/forest/scripts/launcher.sh &
-bindsym $mod+d exec ~/.config/rofi/launchers/type-4/launcher.sh &
-bindsym $mod+shift+d exec ~/.config/rofi/launchers/type-4/launcher.sh window
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
+# Forest theme
+# exec_always --no-startup-id sh -c 'echo "#!/bin/bash\nexec rofi -theme ~/.config/rofi/launchers/type-4/style-1.rasi \"\$@\"" > ~/.local/bin/rofi-themed && chmod +x ~/.local/bin/rofi-themed'
+
+# Shapes theme
+exec_always --no-startup-id sh -c 'echo "#!/bin/bash\nexec rofi -theme ~/.config/rofi/launchers/type-1/style-1.rasi \"\$@\"" > ~/.local/bin/rofi-themed && chmod +x ~/.local/bin/rofi-themed'
+
+bindsym $mod+d exec rofi-themed -show drun
+bindsym $mod+shift+d exec rofi-themed -show window
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --shapes
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpg
 exec --no-startup-id /usr/lib/gsd-xsettings
 

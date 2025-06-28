@@ -133,7 +133,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 '
-source ~/.profile
+source ~/.commonrc
 
 # argcomplete for ros2 & colcon
 eval "$(register-python-argcomplete3 ros2)"
