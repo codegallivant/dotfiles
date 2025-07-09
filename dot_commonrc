@@ -24,3 +24,8 @@ source /usr/share/gazebo/setup.sh
 
 export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:$XDG_DATA_DIRS
 export XDG_DATA_DIRS=/home/cdger/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH//::/:}"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH%:}"
