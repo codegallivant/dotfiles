@@ -3,8 +3,8 @@
 my dotfiles.
 
 ## Desc
-- Display Manager (DM): ly
-- Window Manager (WM): i3
+- Display Manager: ly
+- Window Manager: i3
 - Compositor: picom
 - Bar: polybar
 - Wallpaper Setter: feh
