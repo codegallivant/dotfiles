@@ -33,13 +33,13 @@ power_on() {
 toggle_power() {
     if power_on; then
         bluetoothctl power off
-        show_menu
+        sleep 0.7 && show_menu
     else
         if rfkill list bluetooth | grep -q 'blocked: yes'; then
             rfkill unblock bluetooth && sleep 3
         fi
         bluetoothctl power on
-        show_menu
+        sleep 0.7 && show_menu
     fi
 }
 
@@ -82,10 +82,10 @@ pairable_on() {
 toggle_pairable() {
     if pairable_on; then
         bluetoothctl pairable off
-        show_menu
+        sleep 0.7 && show_menu
     else
         bluetoothctl pairable on
-        show_menu
+        sleep 0.7 && show_menu
     fi
 }
 
@@ -104,10 +104,10 @@ discoverable_on() {
 toggle_discoverable() {
     if discoverable_on; then
         bluetoothctl discoverable off
-        show_menu
+        sleep 0.7 && show_menu
     else
         bluetoothctl discoverable on
-        show_menu
+        sleep 0.7 && show_menu
     fi
 }
 
@@ -125,10 +125,10 @@ device_connected() {
 toggle_connection() {
     if device_connected "$1"; then
         bluetoothctl disconnect "$1"
-        device_menu "$device"
+        sleep 2 && device_menu "$device"
     else
         bluetoothctl connect "$1"
-        device_menu "$device"
+        sleep 3 && device_menu "$device"
     fi
 }
 
@@ -148,10 +148,10 @@ device_paired() {
 toggle_paired() {
     if device_paired "$1"; then
         bluetoothctl remove "$1"
-        device_menu "$device"
+        sleep 0.7 && device_menu "$device"
     else
         bluetoothctl pair "$1"
-        device_menu "$device"
+        sleep 3 && device_menu "$device"
     fi
 }
 
@@ -171,10 +171,10 @@ device_trusted() {
 toggle_trust() {
     if device_trusted "$1"; then
         bluetoothctl untrust "$1"
-        device_menu "$device"
+        sleep 0.7 && device_menu "$device"
     else
         bluetoothctl trust "$1"
-        device_menu "$device"
+        sleep 0.7 && device_menu "$device"
     fi
 }
 
@@ -248,7 +248,7 @@ device_menu() {
             toggle_trust "$mac"
             ;;
         "$goback")
-            show_menu
+            sleep 3 && show_menu
             ;;
     esac
 }

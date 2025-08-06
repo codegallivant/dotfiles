@@ -29,3 +29,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH//::/:}"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH%:}"
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/mnt/d/software/cursor:$PATH"
+

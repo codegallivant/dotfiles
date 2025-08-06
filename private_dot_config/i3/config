@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 000000
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -n -c 000000
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -199,7 +199,7 @@ bindsym $mod+r mode "resize"
 # Shapes theme
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --shapes
 exec_always --no-startup-id sh -c 'echo "#!/bin/bash\nexec rofi -theme ~/.config/rofi/launchers/type-1/style-1.rasi \"\$@\"" > ~/.local/bin/rofi-themed && chmod +x ~/.local/bin/rofi-themed'
-client.focused #859900 #673AB7 #fdf6e3 #859900
+# client.focused #859900 #673AB7 #fdf6e3 #859900
 
 bindsym $mod+d exec rofi-themed -show drun
 bindsym $mod+shift+d exec rofi-themed -show window
@@ -207,14 +207,23 @@ bindsym $mod+shift+d exec rofi-themed -show window
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpg
 exec --no-startup-id /usr/lib/gsd-xsettings
 
-gaps inner 5px
+gaps inner 15px
 gaps outer 3px
 
 bindsym --release Print exec flameshot full
 bindsym --release shift+Print exec flameshot gui
 
 # auto lock the screen
-exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
+#exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
 bindsym Control+$mod+l exec "i3lock -c 000000"
+
+# remove window titlebars
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
+
+client.focused          #444444 #444444 #444444 #444444
+client.focused_inactive #222222 #222222 #222222 #222222
+client.unfocused        #222222 #222222 #222222 #222222
+client.urgent           #FF0000 #FF0000 #FF0000 #FF0000
 
 exec_always --no-startup-id pidof picom 1> /dev/null || picom --config ~/.config/picom/picom.conf &
