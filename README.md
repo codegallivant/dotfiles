@@ -1,16 +1,17 @@
 # dotfiles
 
-my dotfiles.
+my linux configuration.
 
 ## Desc
 - Display Manager: ly
 - Window Manager: i3
-- Compositor: picom
+- Compositor: picom 
 - Bar: polybar
-- Wallpaper Setter: feh
 - Launcher: rofi
-- Terminal: kitty
+- Terminal Emulator: kitty
+- Terminal Multiplexer: tmux
 - Notifications: dunst
+- Wallpaper Setter: feh
 - Lockscreen: i3lock
 
 ## Themes
