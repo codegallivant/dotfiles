@@ -1,7 +1,23 @@
 # dotfiles
 
+my dotfiles.
+
+## Desc
+- Display Manager (DM): ly
+- Window Manager (WM): i3
+- Compositor: picom
+- Bar: polybar
+- Wallpaper Setter: feh
+- Launcher: rofi
+- Terminal: kitty
+- Notifications: dunst
+- Lockscreen: i3lock
+
 ## Themes
-The default theme is ``shapes``. To change the theme, see ``~/.config/i3/config``.
+1. Shapes (default)
+2. Forest
+  
+To change the theme, see ``~/.config/i3/config``.
 
 ### Shapes
 ![Screenshot](screenshots/shapes-1.png)
@@ -10,7 +26,7 @@ The default theme is ``shapes``. To change the theme, see ``~/.config/i3/config`
 ### Forest
 ![Screenshot](screenshots/forest.png)
 
-## Apply config
+## Install configuration
 Install [chezmoi](https://www.chezmoi.io/install/).
 Then,
 ```bash
