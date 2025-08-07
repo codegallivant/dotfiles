@@ -1,6 +1,10 @@
 export GDK_BACKEND=x11
 export CLUTTER_BACKEND=x11
 
+if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
+  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
+
 # Added by Toolbox App
 export PATH="$PATH:/home/cdger/.local/share/JetBrains/Toolbox/scripts"
 
