@@ -1,0 +1,7 @@
+#!/bin/sh
+if dunstctl is-paused | grep -q true
+then
+    echo "%{F#fab387}"
+else
+    echo "%{F#66ffffff}"
+fi

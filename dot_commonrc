@@ -1,5 +1,7 @@
-export GDK_BACKEND=x11
-export CLUTTER_BACKEND=x11
+export dp_serve=x11
+export XDG_SESSION_TYPE=dp_serve 
+export GDK_BACKEND=dp_serve
+export CLUTTER_BACKEND=dp_serve
 
 if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
   tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
