@@ -9,9 +9,9 @@ my linux configuration files.
 - Compositor: [picom](https://github.com/yshui/picom)
 - Launcher: rofi ([various themes](https://github.com/adi1090x/rofi), modded colour scheme)
 - Bar: [polybar](https://github.com/polybar/polybar) (colour schemes by various artists. some new modules.)
-- Terminal Emulator: kitty ([rose-pine theme](https://github.com/rose-pine/kitty))
-- Terminal Multiplexer: tmux ([catppuccin theme](https://github.com/catppuccin/tmux))
-- Shells: [zsh](https://sourceforge.net/p/zsh/code/ci/master/tree/)([powerlevel10k](https://github.com/romkatv/powerlevel10k) on [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)), [bash](https://cgit.git.savannah.gnu.org/cgit/bash.git/)([powerline-shell theme](https://github.com/b-ryan/powerline-shell))
+- Terminal Emulator: [kitty](https://github.com/kovidgoyal/kitty) ([rose-pine theme](https://github.com/rose-pine/kitty))
+- Terminal Multiplexer: [tmux](https://github.com/xero/dotfiles/tree/main/tmux) ([catppuccin theme](https://github.com/catppuccin/tmux))
+- Shells: [zsh](https://sourceforge.net/p/zsh/code/ci/master/tree/)([powerlevel10k](https://github.com/romkatv/powerlevel10k) on [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)), [bash](https://cgit.git.savannah.gnu.org/cgit/bash.git/)([powerline-shell theme](https://github.com/b-ryan/powerline-shell))
 - Notifications: [dunst](https://github.com/dunst-project/dunst) (config from [here](https://github.com/Kaligule/dunst-config))
 - Lockscreen: [i3lock](https://github.com/i3/i3lock)
 
