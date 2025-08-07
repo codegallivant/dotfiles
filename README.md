@@ -4,7 +4,7 @@ my linux configuration files.
 
 ## Desc
 - Display Server: [x11](https://gitlab.freedesktop.org/xorg/lib/libx11)
-- Display Manager: [ly](https://github.com/fairyglade/ly)
+- Login Manager: [ly](https://github.com/fairyglade/ly)
 - Window Manager: [i3](https://github.com/i3/i3)
 - Compositor: [picom](https://github.com/yshui/picom)
 - Launcher: rofi ([various themes](https://github.com/adi1090x/rofi), modded colour scheme)
