@@ -5,5 +5,5 @@ if [ "$status" = "Playing" ]; then
 elif [ "$status" = "Paused" ]; then
     echo "%{F#81A1C1}♬"
 else
-    echo "%{F#BF616A}♬"
+    echo "%{F#66ffffff}♬"
 fi
