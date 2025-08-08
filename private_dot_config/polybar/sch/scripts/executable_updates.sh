@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-NOTIFY_ICON="/home/cdger/Pictures/ubuntu-4.svg"
+NOTIFY_ICON="~/Pictures/ubuntu-4.svg"
 
 update() {
     UPDATES=$(apt list --upgradeable 2>/dev/null | grep -vc "Listing...")
