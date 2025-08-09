@@ -1,7 +1,9 @@
 export dp_serve=x11
-export XDG_SESSION_TYPE=dp_serve 
-export GDK_BACKEND=dp_serve
-export CLUTTER_BACKEND=dp_serve
+export XDG_SESSION_TYPE=$dp_serve 
+export GDK_BACKEND=$dp_serve
+export CLUTTER_BACKEND=$dp_serve
+
+export TERMINAL=kitty
 
 if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
   tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
@@ -40,4 +42,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/mnt/d/software/cursor:$PATH"
 export PATH="/mnt/d/software/go/bin:$PATH"
 export PATH="/mnt/d/software/kitty-0.42.2/kitty/launcher:$PATH"
-export TERMINAL="kitty"
+export PATH="/mnt/d/software/nvim-linux-x86_64/bin:$PATH"

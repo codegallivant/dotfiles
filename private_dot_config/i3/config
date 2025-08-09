@@ -96,7 +96,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+q layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -206,6 +206,9 @@ exec_always --no-startup-id sh -c 'echo "#!/bin/bash\nexec rofi -theme ~/.config
 
 bindsym $mod+d exec rofi-themed -show drun
 bindsym $mod+shift+d exec rofi-themed -show window
+bindsym $mod+b exec ~/.config/polybar/common/scripts/rofi-bluetooth/rofi-bluetooth
+bindsym $mod+c exec networkmanager_dmenu
+bindsym $mod+p exec ~/.config/rofi/powermenu/type-1/powermenu.sh &
 
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpg
 exec --no-startup-id /usr/lib/gsd-xsettings
@@ -230,3 +233,4 @@ client.unfocused        #222222 #222222 #222222 #222222
 client.urgent           #FF0000 #FF0000 #FF0000 #FF0000
 
 exec_always --no-startup-id pidof picom 1> /dev/null || picom --config ~/.config/picom/picom.conf &
+
